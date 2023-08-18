@@ -10,6 +10,7 @@ package com.koai.base.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
@@ -27,6 +28,7 @@ class TComparator<T : Any> : DiffUtil.ItemCallback<T>() {
 
 abstract class BaseListAdapter<T : Any> : ListAdapter<T, BaseListAdapter.VH>(TComparator<T>()) {
     var listener: Action<T>? = null
+    var observer: Observer<T>? = null
 
     class VH(val binding: ViewBinding) : ViewHolder(binding.root)
 
@@ -46,10 +48,25 @@ abstract class BaseListAdapter<T : Any> : ListAdapter<T, BaseListAdapter.VH>(TCo
         holder.binding.root.setOnClickListener {
             listener?.click(position, getItem(position))
         }
+//        observer?.subData...
     }
 
     interface Action<T> {
+        /**
+         * @param position of viewItem
+         * @param data of viewItem
+         */
         fun click(position: Int, data: T, code: Int = 0)
+    }
+
+    interface Observer<T>{
+        /**
+         * @param root is viewItem (for visible handle)
+         * @param childView can be child recycle_view or viewpager
+         * @param data of item
+         * @param code for handle
+         */
+        fun subData(root: View, childView: View, data: T, code: Int = 0)
     }
 }
 
