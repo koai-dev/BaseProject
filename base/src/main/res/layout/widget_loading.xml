@@ -13,14 +13,15 @@
 
     <ImageView
         android:id="@+id/imageView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
-        android:padding="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="8dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="@id/img_rotate"
+        app:layout_constraintEnd_toEndOf="@id/img_rotate"
+        app:layout_constraintStart_toStartOf="@id/img_rotate"
+        app:layout_constraintTop_toTopOf="@id/img_rotate"
         app:srcCompat="@drawable/ic_background_loading" />
 
     <ImageView
@@ -28,9 +29,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_rotate_loading"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView43"
-        app:layout_constraintEnd_toEndOf="@+id/imageView43"
-        app:layout_constraintStart_toStartOf="@+id/imageView43"
-        app:layout_constraintTop_toTopOf="@+id/imageView43" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

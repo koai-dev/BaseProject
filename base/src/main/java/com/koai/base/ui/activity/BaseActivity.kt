@@ -49,7 +49,7 @@ abstract class BaseActivity : AppCompatActivity() {
         setContentView(rootView.root)
         initView(savedInstanceState, binding)
         NetworkUtil(this).observe(this) {
-            if (it){
+            if (!it){
                 Toast.makeText(this, resources.getString(R.string.you_are_offline), Toast.LENGTH_SHORT).show()
             }
         }

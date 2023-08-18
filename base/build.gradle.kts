@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         minSdk = 24
-
+        multiDexEnabled = true
         aarMetadata {
             minCompileSdk = 29
         }
@@ -22,6 +22,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            multiDexKeepProguard = file("multidex-config.pro")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -104,5 +105,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
     implementation ("androidx.fragment:fragment-ktx:1.6.1")
+
+    implementation("androidx.multidex:multidex:2.0.1")
 
 }
