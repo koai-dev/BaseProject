@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /**
+  ~  * Created by LAPTOP on 8/19/23, 4:36 AM
+  ~  * Copyright (c) 2023 . All rights reserved.
+  ~  * Last modified 8/19/23, 4:36 AM
+  ~  */
+  -->
+
+<resources>
+    <color name="black">#222222</color>
+    <color name="white">#ffffff</color>
+</resources>
