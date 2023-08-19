@@ -11,7 +11,9 @@ Base project with many features for android project
 - Utils classes include Screen, Network, SharePreference, Permission, Const, EventType
 # How to make it work?
 - Fork and clone this project to your computer
-- Sync project
+- Sync clone project
 - From terminal in android studio: paste: /.gradlew assemble
 - Get aar file from build folder -> output -> aar -> get base-release.aar
 - Import aar file to your project.
+- Import implementation("org.greenrobot:eventbus:3.3.1")
+- Sync your project. Done
